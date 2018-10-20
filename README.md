@@ -9,3 +9,4 @@ PL
 
 Proste narzędzie do budowy binarnego repozytorium Kodi.
 
+[Dokumentacja](doc/pl/README.md).
