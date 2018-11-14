@@ -83,8 +83,12 @@ Zawartość repozytorium może być określana na wiele sposobów.
 Wiele dodatków można budować z jednego źródła, jeden dodatek z wielu źródeł, 
 pobierać gotowe paczki, wybierać tylko niektóre foldery, ~~albo mieszać powyższe~~.
 
-Są dwa podstawowe sposoby definicji:
-* dodatek z listą wielu źródeł:
+Lista dodatków, które wchodzą w skład repozytorium skałda się z elementów:
+* z ID dodatku, który jest określony wcześniej:
+```yaml
+addon: plugin.video.myplugin
+```
+* definicji dodatku, opisanego wyżej w sekcji [Addon](#addon):
 ```yaml
 addon:
   id: ...
@@ -93,7 +97,7 @@ addon:
       folder: ...
     - git: ...
 ```
-* źródło, z którego budowanych jest wiele dodatków:
+* źródła, z którego budowanych jest wiele dodatków:
 ```yaml
 git: ...
 list:
@@ -101,8 +105,10 @@ list:
   - addon: ...
 ```
 
-Źródło może też wskazywać na gotowy dodatek zarówno w postaci źródłowej
-jak i binarnej ZIP.
+Ostatnia opcja (żródło z listą dodatków) może zawierać tylko definicję dodatku.
+Innymi słowy nie może się zagłębiać.
+Jest to po skrót aby nie podawać źródła przy każdym dodatku jeśli jest takie samo.
+
 
 ### Dodatek
 
